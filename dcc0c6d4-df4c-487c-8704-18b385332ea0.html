@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 24.8.1.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 1in }
+		p { line-height: 115%; text-align: left; orphans: 2; widows: 2; margin-bottom: 0.1in; direction: ltr; background: transparent }
+	</style>
+</head>
+<body lang="es-ES" link="#000080" vlink="#800000" dir="ltr"><p style="margin-bottom: 0in">
+&lt;!DOCTYPE html&gt;</p>
+<p style="margin-bottom: 0in">&lt;html lang=&quot;es&quot;&gt;</p>
+<p style="margin-bottom: 0in">&lt;head&gt;</p>
+<p style="margin-bottom: 0in">    &lt;meta charset=&quot;UTF-8&quot;&gt;</p>
+<p style="margin-bottom: 0in">    &lt;meta name=&quot;viewport&quot;
+content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</p>
+<p style="margin-bottom: 0in">    &lt;title&gt;Feliz
+Cumpleaños&lt;/title&gt;</p>
+<p style="margin-bottom: 0in">    &lt;style&gt;</p>
+<p style="margin-bottom: 0in">        body {</p>
+<p style="margin-bottom: 0in">            font-family: Arial,
+sans-serif;</p>
+<p style="margin-bottom: 0in">            text-align: center;</p>
+<p style="margin-bottom: 0in">            background-color: #f0f8ff;</p>
+<p style="margin-bottom: 0in">        }</p>
+<p style="margin-bottom: 0in">        #birthday-message {</p>
+<p style="margin-bottom: 0in">            margin-top: 20px;</p>
+<p style="margin-bottom: 0in">            font-size: 18px;</p>
+<p style="margin-bottom: 0in">            color: #333;</p>
+<p style="margin-bottom: 0in">        }</p>
+<p style="margin-bottom: 0in">        canvas {</p>
+<p style="margin-bottom: 0in">            margin-top: 20px;</p>
+<p style="margin-bottom: 0in">            border: 1px solid #ccc;</p>
+<p style="margin-bottom: 0in">        }</p>
+<p style="margin-bottom: 0in">    &lt;/style&gt;</p>
+<p style="margin-bottom: 0in">&lt;/head&gt;</p>
+<p style="margin-bottom: 0in">&lt;body&gt;</p>
+<p style="margin-bottom: 0in">    &lt;h1&gt;Es tu cumpleaños?&lt;/h1&gt;</p>
+<p style="margin-bottom: 0in">    &lt;button
+id=&quot;askBirthdayBtn&quot;&gt;Preguntar&lt;/button&gt;</p>
+<p style="margin-bottom: 0in">    &lt;p id=&quot;birthday-message&quot;&gt;&lt;/p&gt;</p>
+<p style="margin-bottom: 0in">    &lt;canvas id=&quot;flowerCanvas&quot;
+width=&quot;400&quot; height=&quot;400&quot;&gt;&lt;/canvas&gt;</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">    &lt;script&gt;</p>
+<p style="margin-bottom: 0in">        const askBirthdayBtn =
+document.getElementById(&quot;askBirthdayBtn&quot;);</p>
+<p style="margin-bottom: 0in">        const birthdayMessage =
+document.getElementById(&quot;birthday-message&quot;);</p>
+<p style="margin-bottom: 0in">        const flowerCanvas =
+document.getElementById(&quot;flowerCanvas&quot;);</p>
+<p style="margin-bottom: 0in">        const ctx =
+flowerCanvas.getContext(&quot;2d&quot;);</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">       
+askBirthdayBtn.addEventListener(&quot;click&quot;, () =&gt; {</p>
+<p style="margin-bottom: 0in">            const isBirthday =
+confirm(&quot;Es tu cumpleaños?&quot;);</p>
+<p style="margin-bottom: 0in">            if (isBirthday) {</p>
+<p style="margin-bottom: 0in">                drawFlower();</p>
+<p style="margin-bottom: 0in">               
+birthdayMessage.innerText = &quot;Me tarde en hacer este detalle,
+pero ahora puedes decir que un ingeniero te desarrolló un código
+solo para ti.\nFeliz cumpleaños de chica guapa!&quot;;</p>
+<p style="margin-bottom: 0in">            } else {</p>
+<p style="margin-bottom: 0in">               
+birthdayMessage.innerText = &quot;Oh, está bien! Espero que tengas
+un gran día de todas formas!&quot;;</p>
+<p style="margin-bottom: 0in">            }</p>
+<p style="margin-bottom: 0in">        });</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">        function drawFlower() {</p>
+<p style="margin-bottom: 0in">            // Limpiar el canvas</p>
+<p style="margin-bottom: 0in">            ctx.clearRect(0, 0,
+flowerCanvas.width, flowerCanvas.height);</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">            // Dibujar pétalos</p>
+<p style="margin-bottom: 0in">            ctx.strokeStyle =
+&quot;#ff69b4&quot;;</p>
+<p style="margin-bottom: 0in">            ctx.lineWidth = 3;</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">            // Pétalo superior</p>
+<p style="margin-bottom: 0in">            ctx.beginPath();</p>
+<p style="margin-bottom: 0in">            ctx.ellipse(200, 100, 50,
+70, 0, 0, Math.PI * 2);</p>
+<p style="margin-bottom: 0in">            ctx.stroke();</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">            // Pétalo izquierdo</p>
+<p style="margin-bottom: 0in">            ctx.beginPath();</p>
+<p style="margin-bottom: 0in">            ctx.ellipse(150, 200, 50,
+70, Math.PI / 2, 0, Math.PI * 2);</p>
+<p style="margin-bottom: 0in">            ctx.stroke();</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">            // Pétalo derecho</p>
+<p style="margin-bottom: 0in">            ctx.beginPath();</p>
+<p style="margin-bottom: 0in">            ctx.ellipse(250, 200, 50,
+70, Math.PI / 2, 0, Math.PI * 2);</p>
+<p style="margin-bottom: 0in">            ctx.stroke();</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">            // Pétalo inferior</p>
+<p style="margin-bottom: 0in">            ctx.beginPath();</p>
+<p style="margin-bottom: 0in">            ctx.ellipse(200, 300, 50,
+70, 0, 0, Math.PI * 2);</p>
+<p style="margin-bottom: 0in">            ctx.stroke();</p>
+<p style="margin-bottom: 0in"><br/>
+
+</p>
+<p style="margin-bottom: 0in">            // Centro de la flor</p>
+<p style="margin-bottom: 0in">            ctx.fillStyle = &quot;#FFD700&quot;;</p>
+<p style="margin-bottom: 0in">            ctx.beginPath();</p>
+<p style="margin-bottom: 0in">            ctx.arc(200, 200, 40, 0,
+Math.PI * 2);</p>
+<p style="margin-bottom: 0in">            ctx.fill();</p>
+<p style="margin-bottom: 0in">        }</p>
+<p style="margin-bottom: 0in">    &lt;/script&gt;</p>
+<p style="margin-bottom: 0in">&lt;/body&gt;</p>
+<p style="margin-bottom: 0in">&lt;/html&gt;</p>
+</body>
+</html>
